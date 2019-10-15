@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <br>
+    <div class="container">
+      <h1>Web &#60;-&#62; Android, iOS</h1>
+    </div>
+    <br>
+    <div class="container">
+      <button type="button" id="web_to_android" class="btn btn-primary mb-2">Web -&#62; Android</button>
+      <br>
+      <button type="button" id="web_to_ios" class="btn btn-success">Web -&#62; iOS</button>
+    </div>
+    <br>
+    <div class="container">
+      <button type="button" id="android_to_web" class="btn btn-warning mb-2">Android -&#62; Web</button>
+      <br>
+      <button type="button" id="ios_to_web" class="btn btn-info">iOS -&#62; Web</button>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("#web_to_android").click(function() {
+          console.log("#web_to_android");
+          alert('#web_to_android"');
+          Android.web_to_android('{"string": "Hello android", "number": 1}')
+        });
+        $("#web_to_ios").click(function() {
+
+          console.log("web_to_ios");
+          alert('web_to_ios"');
+          console.log(getMobileOperatingSystem());
+          window.webkit.messageHandlers.web_to_ios.postMessage('{"string": "Hello ios", "number": 2}');
+          //window.webkit.messageHandlers.web_to_ios.postMessage("Hello, world!");
+        });
+        $("#android_to_web").click(function() {
+          console.log("#android_to_web");
+          alert('#android_to_web"');
+        });
+        $("#ios_to_web").click(function() {
+          console.log("#ios_to_web");
+          alert('#ios_to_web"');
+        });
+        var getMobileOperatingSystem = function() {
+          var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+          // Windows Phone must come first because its UA also contains "Android"
+          if (/windows phone/i.test(userAgent)) {
+              return "Windows Phone";
+          }
+
+          if (/android/i.test(userAgent)) {
+              return "Android";
+          }
+
+          // iOS detection from: http://stackoverflow.com/a/9039885/177710
+          if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+              return "iOS";
+          }
+
+          return "unknown";
+        }
+
+      })
+    </script>
+  </body>
+</html>
