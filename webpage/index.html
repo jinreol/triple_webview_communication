@@ -23,10 +23,134 @@
     </div>
     <br>
     <div class="container">
-      <button type="button" id="android_to_web" class="btn btn-warning mb-2">Android -&#62; Web</button>
+      <button type="button" id="web_to_android_capture" class="btn btn-primary mb-2">Web -&#62; Android : Screen Capture</button>
       <br>
-      <button type="button" id="ios_to_web" class="btn btn-info">iOS -&#62; Web</button>
+      <button type="button" id="web_to_ios_capture" class="btn btn-success">Web -&#62; iOS : Screen Capture</button>
     </div>
+    <br>
+
+    <div class="container">
+      <hr>
+
+      <p>
+        <h3>Line 01</h3>
+      </p>
+
+      <hr>
+      
+      <p>
+        <h3>Line 02</h3>
+      </p>
+
+      <hr>
+      
+      <p>
+        <h3>Line 03</h3>
+      </p>
+
+      <hr>
+      
+      <p>
+        <h3>Line 04</h3>
+      </p>
+
+      <hr>
+      
+      <p>
+        <h3>Line 05</h3>
+      </p>
+
+      <hr>
+      
+      <p>
+        <h3>Line 06</h3>
+      </p>
+
+      <hr>
+      
+      <p>
+        <h3>Line 07</h3>
+      </p>
+
+      <hr>
+      
+      <p>
+        <h3>Line 08</h3>
+      </p>
+
+      <hr>
+      
+      <p>
+        <h3>Line 09</h3>
+      </p>
+
+      <hr>
+      
+      <p>
+        <h3>Line 10</h3>
+      </p>
+
+      <hr>
+
+      <p>
+        <h3>Line 11</h3>
+      </p>
+
+      <hr>
+      
+      <p>
+        <h3>Line 12</h3>
+      </p>
+
+      <hr>
+      
+      <p>
+        <h3>Line 13</h3>
+      </p>
+
+      <hr>
+      
+      <p>
+        <h3>Line 14</h3>
+      </p>
+
+      <hr>
+      
+      <p>
+        <h3>Line 15</h3>
+      </p>
+
+      <hr>
+      
+      <p>
+        <h3>Line 16</h3>
+      </p>
+
+      <hr>
+      
+      <p>
+        <h3>Line 17</h3>
+      </p>
+
+      <hr>
+      
+      <p>
+        <h3>Line 18</h3>
+      </p>
+
+      <hr>
+      
+      <p>
+        <h3>Line 19</h3>
+      </p>
+
+      <hr>
+      
+      <p>
+        <h3>Line 20</h3>
+      </p>
+    </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -35,28 +159,40 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script>
+      // 안드로이드 -> 웹 데이터 송부 
+      function android_to_web(sendJson) {
+        console.log('android_to_web:',sendJson);
+      }
+
       $(document).ready(function() {
+
         $("#web_to_android").click(function() {
           console.log("#web_to_android");
           alert('#web_to_android"');
-          Android.web_to_android('{"string": "Hello android", "number": 1}')
+          Android.web_to_android('{"command": "Hello android", "data": "world"}')
         });
-        $("#web_to_ios").click(function() {
 
+        $("#web_to_ios").click(function() {
           console.log("web_to_ios");
           alert('web_to_ios"');
           console.log(getMobileOperatingSystem());
-          window.webkit.messageHandlers.web_to_ios.postMessage('{"string": "Hello ios", "number": 2}');
-          //window.webkit.messageHandlers.web_to_ios.postMessage("Hello, world!");
+          window.webkit.messageHandlers.web_to_ios.postMessage('{"command": "Hello ios", "data": "world"}');
         });
-        $("#android_to_web").click(function() {
-          console.log("#android_to_web");
-          alert('#android_to_web"');
+
+        // 웹 -> 안드로이드 캡쳐 요청
+        $("#web_to_android_capture").click(function() { // 화면 캡쳐
+          console.log("#web_to_android_capture");
+          alert('#web_to_android_capture"');
+          Android.web_to_android('{"command": "capture", "data": ""}');
         });
-        $("#ios_to_web").click(function() {
-          console.log("#ios_to_web");
-          alert('#ios_to_web"');
+
+
+        $("#web_to_ios_capture").click(function() {
+          console.log("#web_to_ios_capture");
+          alert('#web_to_ios_capture"');
+          window.webkit.messageHandlers.web_to_ios.postMessage('{"command": "capture", "data": ""}');
         });
+
         var getMobileOperatingSystem = function() {
           var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
@@ -76,6 +212,8 @@
 
           return "unknown";
         }
+
+
 
       })
     </script>
