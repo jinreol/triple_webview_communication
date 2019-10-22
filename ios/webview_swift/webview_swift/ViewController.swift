@@ -27,7 +27,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
     
     override func loadView() {
         
-        let targetURL = "http://172.20.10.8:8888"
+        let targetURL = "http://10.17.119.151:8888/"
         //let targetURL = "http://10.0.1.49:8888"
 //var targetURL = "https://www.apple.com"
         
@@ -128,6 +128,31 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
         
         if message.name == "web_to_ios", let messageBody = message.body as? String {
             print(messageBody)
+            
+            let data = messageBody.data(using: .utf8)!
+            
+            do {
+                var oJsonDictionaryT: [String:Any]?
+                oJsonDictionaryT = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String:Any]
+                
+                if let oJsonDictionary = oJsonDictionaryT {
+                    if let strCommand = oJsonDictionary["command"] as? String, let strData = oJsonDictionary["data"] as? String {
+                        print("command:\(strCommand)")
+                        print("a:\(strData)")
+                        
+                        if strCommand.elementsEqual("capture") {
+                            print("command is capture")
+                        }
+
+                    }
+                }
+                
+                
+            } catch let error as NSError {
+                print(error)
+            }
+            
+            
         }
         
     }

@@ -22,7 +22,7 @@
     [super loadView];
     NSLog(@"loadView");
     
-    NSString *targetURL = @"http://172.20.10.8:8888";
+    NSString *targetURL = @"http://10.17.119.151:8888/";
     
     WKUserContentController *contentController;
     WKWebViewConfiguration *config;
