@@ -16,9 +16,9 @@ import WebKit
 //https://medium.com/capital-one-tech/javascript-manipulation-on-ios-using-webkit-2b1115e7e405
 
 class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler  {
-
     
-
+    
+    var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,19 +28,15 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
     override func loadView() {
         
         let targetURL = "http://10.17.119.151:8888/"
-        //let targetURL = "http://10.0.1.49:8888"
-//var targetURL = "https://www.apple.com"
+        
         
         let contentController = WKUserContentController()
-//        let scriptSource = "document.body.style.backgroundColor=`red`;"
-//        let script = WKUserScript(source: scriptSource, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
-//        contentController.addUserScript(script)
-//
         contentController.add(self, name: "web_to_ios")
+        
         let config = WKWebViewConfiguration()
         config.userContentController = contentController
         
-        let webView = WKWebView(frame: .zero, configuration: config)
+        webView = WKWebView(frame: .zero, configuration: config)
         
         webView.navigationDelegate = self
         webView.uiDelegate = self
@@ -54,7 +50,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
         
         
     }
-
+    
     //--------------------------------------------------//
     //  WKNavigationDelegate                            //
     //--------------------------------------------------//
@@ -62,11 +58,11 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
         print("웹뷰가 웹 컨텐츠를 받기 시작할 때 호출됩니다.");
     }
-
+    
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         print("웹 컨텐츠가 웹뷰에서 로드되기 시작할 때 호출됩니다.");
     }
-
+    
     func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
         print("웹뷰가 서버 리디렉션을 수신 할 때 호출됩니다.")
     }
@@ -77,7 +73,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
         print("탐색 허용 여부를 결정합니다.")
         decisionHandler(.allow)
     }
-
+    
     func webView(_ webView: WKWebView, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
         // 사설 인증서로 구성된 서버로 접근이 가능합니다.
         print("웹뷰가 인증 요청에 응답해야 할 때 호출됩니다.")
@@ -88,15 +84,15 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         print("탐색 중에 오류가 발생하면 호출됩니다.")
     }
-
+    
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         print("웹보기가 내용을로드하는 동안 오류가 발생하면 호출됩니다.")
     }
-
+    
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("탐색이 완료되면 호출됩니다.")
     }
-
+    
     func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
         print("웹뷰의 웹 콘텐츠 프로세스가 종료 될 때 호출됩니다.")
     }
@@ -120,7 +116,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
         present(ac, animated: true)
         completionHandler()
     }
-
+    
     //--------------------------------------------------//
     //  WKNavigation                                    //
     //--------------------------------------------------//
@@ -138,21 +134,29 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
                 if let oJsonDictionary = oJsonDictionaryT {
                     if let strCommand = oJsonDictionary["command"] as? String, let strData = oJsonDictionary["data"] as? String {
                         print("command:\(strCommand)")
-                        print("a:\(strData)")
+                        print("data:\(strData)")
+                        
+                        print("width:\(webView.scrollView.contentSize.width)")
+                        print("height:\(webView.scrollView.contentSize.height)")
                         
                         if strCommand.elementsEqual("capture") {
                             print("command is capture")
+                            
+                            let config = WKSnapshotConfiguration()
+                            config.rect = CGRect(x: 0, y: 0, width: webView.scrollView.contentSize.width, height: webView.scrollView.contentSize.height)
+                            
+                            webView.takeSnapshot(with: config) { (image, error) in
+                                if let image = image {
+                                    print(image.size)
+                                    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                                }
+                            }
                         }
-
                     }
                 }
-                
-                
             } catch let error as NSError {
                 print(error)
             }
-            
-            
         }
         
     }
@@ -164,18 +168,18 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
     
     
     
-
     
     
     
     
     
-
-//    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-//        print("received message")
-//        if message.name == "web_to_ios" {
-//            print("web_to_ios:", message.body);
-//        }
-//    }
+    
+    
+    //    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+    //        print("received message")
+    //        if message.name == "web_to_ios" {
+    //            print("web_to_ios:", message.body);
+    //        }
+    //    }
 }
 

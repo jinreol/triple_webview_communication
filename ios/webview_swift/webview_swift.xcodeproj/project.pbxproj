@@ -7,27 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F344A8902350303400BAAD5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F344A88F2350303400BAAD5D /* AppDelegate.swift */; };
-		F344A8922350303400BAAD5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F344A8912350303400BAAD5D /* SceneDelegate.swift */; };
-		F344A8942350303400BAAD5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F344A8932350303400BAAD5D /* ViewController.swift */; };
-		F344A8972350303400BAAD5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F344A8952350303400BAAD5D /* Main.storyboard */; };
-		F344A8992350303500BAAD5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F344A8982350303500BAAD5D /* Assets.xcassets */; };
-		F344A89C2350303500BAAD5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F344A89A2350303500BAAD5D /* LaunchScreen.storyboard */; };
+		F34DAF09235EF5C000EDE5B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34DAF08235EF5C000EDE5B3 /* AppDelegate.swift */; };
+		F34DAF0B235EF5C000EDE5B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34DAF0A235EF5C000EDE5B3 /* ViewController.swift */; };
+		F34DAF0E235EF5C000EDE5B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F34DAF0C235EF5C000EDE5B3 /* Main.storyboard */; };
+		F34DAF10235EF5C000EDE5B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34DAF0F235EF5C000EDE5B3 /* Assets.xcassets */; };
+		F34DAF13235EF5C000EDE5B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F34DAF11235EF5C000EDE5B3 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F344A88C2350303400BAAD5D /* webview_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = webview_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F344A88F2350303400BAAD5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F344A8912350303400BAAD5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F344A8932350303400BAAD5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F344A8962350303400BAAD5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F344A8982350303500BAAD5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F344A89B2350303500BAAD5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F344A89D2350303500BAAD5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F34DAF05235EF5C000EDE5B3 /* webview_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = webview_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F34DAF08235EF5C000EDE5B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F34DAF0A235EF5C000EDE5B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F34DAF0D235EF5C000EDE5B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F34DAF0F235EF5C000EDE5B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F34DAF12235EF5C000EDE5B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F34DAF14235EF5C000EDE5B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F344A8892350303400BAAD5D /* Frameworks */ = {
+		F34DAF02235EF5C000EDE5B3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,32 +35,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F344A8832350303400BAAD5D = {
+		F34DAEFC235EF5C000EDE5B3 = {
 			isa = PBXGroup;
 			children = (
-				F344A88E2350303400BAAD5D /* webview_swift */,
-				F344A88D2350303400BAAD5D /* Products */,
+				F34DAF07235EF5C000EDE5B3 /* webview_swift */,
+				F34DAF06235EF5C000EDE5B3 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F344A88D2350303400BAAD5D /* Products */ = {
+		F34DAF06235EF5C000EDE5B3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F344A88C2350303400BAAD5D /* webview_swift.app */,
+				F34DAF05235EF5C000EDE5B3 /* webview_swift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F344A88E2350303400BAAD5D /* webview_swift */ = {
+		F34DAF07235EF5C000EDE5B3 /* webview_swift */ = {
 			isa = PBXGroup;
 			children = (
-				F344A88F2350303400BAAD5D /* AppDelegate.swift */,
-				F344A8912350303400BAAD5D /* SceneDelegate.swift */,
-				F344A8932350303400BAAD5D /* ViewController.swift */,
-				F344A8952350303400BAAD5D /* Main.storyboard */,
-				F344A8982350303500BAAD5D /* Assets.xcassets */,
-				F344A89A2350303500BAAD5D /* LaunchScreen.storyboard */,
-				F344A89D2350303500BAAD5D /* Info.plist */,
+				F34DAF08235EF5C000EDE5B3 /* AppDelegate.swift */,
+				F34DAF0A235EF5C000EDE5B3 /* ViewController.swift */,
+				F34DAF0C235EF5C000EDE5B3 /* Main.storyboard */,
+				F34DAF0F235EF5C000EDE5B3 /* Assets.xcassets */,
+				F34DAF11235EF5C000EDE5B3 /* LaunchScreen.storyboard */,
+				F34DAF14235EF5C000EDE5B3 /* Info.plist */,
 			);
 			path = webview_swift;
 			sourceTree = "<group>";
@@ -70,13 +67,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F344A88B2350303400BAAD5D /* webview_swift */ = {
+		F34DAF04235EF5C000EDE5B3 /* webview_swift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F344A8A02350303500BAAD5D /* Build configuration list for PBXNativeTarget "webview_swift" */;
+			buildConfigurationList = F34DAF17235EF5C000EDE5B3 /* Build configuration list for PBXNativeTarget "webview_swift" */;
 			buildPhases = (
-				F344A8882350303400BAAD5D /* Sources */,
-				F344A8892350303400BAAD5D /* Frameworks */,
-				F344A88A2350303400BAAD5D /* Resources */,
+				F34DAF01235EF5C000EDE5B3 /* Sources */,
+				F34DAF02235EF5C000EDE5B3 /* Frameworks */,
+				F34DAF03235EF5C000EDE5B3 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,25 +81,25 @@
 			);
 			name = webview_swift;
 			productName = webview_swift;
-			productReference = F344A88C2350303400BAAD5D /* webview_swift.app */;
+			productReference = F34DAF05235EF5C000EDE5B3 /* webview_swift.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F344A8842350303400BAAD5D /* Project object */ = {
+		F34DAEFD235EF5C000EDE5B3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1110;
-				LastUpgradeCheck = 1110;
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "jinreol kim";
 				TargetAttributes = {
-					F344A88B2350303400BAAD5D = {
-						CreatedOnToolsVersion = 11.1;
+					F34DAF04235EF5C000EDE5B3 = {
+						CreatedOnToolsVersion = 10.0;
 					};
 				};
 			};
-			buildConfigurationList = F344A8872350303400BAAD5D /* Build configuration list for PBXProject "webview_swift" */;
+			buildConfigurationList = F34DAF00235EF5C000EDE5B3 /* Build configuration list for PBXProject "webview_swift" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +107,54 @@
 				en,
 				Base,
 			);
-			mainGroup = F344A8832350303400BAAD5D;
-			productRefGroup = F344A88D2350303400BAAD5D /* Products */;
+			mainGroup = F34DAEFC235EF5C000EDE5B3;
+			productRefGroup = F34DAF06235EF5C000EDE5B3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F344A88B2350303400BAAD5D /* webview_swift */,
+				F34DAF04235EF5C000EDE5B3 /* webview_swift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F344A88A2350303400BAAD5D /* Resources */ = {
+		F34DAF03235EF5C000EDE5B3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F344A89C2350303500BAAD5D /* LaunchScreen.storyboard in Resources */,
-				F344A8992350303500BAAD5D /* Assets.xcassets in Resources */,
-				F344A8972350303400BAAD5D /* Main.storyboard in Resources */,
+				F34DAF13235EF5C000EDE5B3 /* LaunchScreen.storyboard in Resources */,
+				F34DAF10235EF5C000EDE5B3 /* Assets.xcassets in Resources */,
+				F34DAF0E235EF5C000EDE5B3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F344A8882350303400BAAD5D /* Sources */ = {
+		F34DAF01235EF5C000EDE5B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F344A8942350303400BAAD5D /* ViewController.swift in Sources */,
-				F344A8902350303400BAAD5D /* AppDelegate.swift in Sources */,
-				F344A8922350303400BAAD5D /* SceneDelegate.swift in Sources */,
+				F34DAF0B235EF5C000EDE5B3 /* ViewController.swift in Sources */,
+				F34DAF09235EF5C000EDE5B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F344A8952350303400BAAD5D /* Main.storyboard */ = {
+		F34DAF0C235EF5C000EDE5B3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F344A8962350303400BAAD5D /* Base */,
+				F34DAF0D235EF5C000EDE5B3 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		F344A89A2350303500BAAD5D /* LaunchScreen.storyboard */ = {
+		F34DAF11235EF5C000EDE5B3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F344A89B2350303500BAAD5D /* Base */,
+				F34DAF12235EF5C000EDE5B3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +162,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F344A89E2350303500BAAD5D /* Debug */ = {
+		F34DAF15235EF5C000EDE5B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -198,6 +194,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -216,7 +213,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -226,7 +223,7 @@
 			};
 			name = Debug;
 		};
-		F344A89F2350303500BAAD5D /* Release */ = {
+		F34DAF16235EF5C000EDE5B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -258,6 +255,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -270,7 +268,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -280,7 +278,7 @@
 			};
 			name = Release;
 		};
-		F344A8A12350303500BAAD5D /* Debug */ = {
+		F34DAF18235EF5C000EDE5B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -292,12 +290,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "triplesoft.webview-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		F344A8A22350303500BAAD5D /* Release */ = {
+		F34DAF19235EF5C000EDE5B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -309,7 +307,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "triplesoft.webview-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -317,25 +315,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F344A8872350303400BAAD5D /* Build configuration list for PBXProject "webview_swift" */ = {
+		F34DAF00235EF5C000EDE5B3 /* Build configuration list for PBXProject "webview_swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F344A89E2350303500BAAD5D /* Debug */,
-				F344A89F2350303500BAAD5D /* Release */,
+				F34DAF15235EF5C000EDE5B3 /* Debug */,
+				F34DAF16235EF5C000EDE5B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F344A8A02350303500BAAD5D /* Build configuration list for PBXNativeTarget "webview_swift" */ = {
+		F34DAF17235EF5C000EDE5B3 /* Build configuration list for PBXNativeTarget "webview_swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F344A8A12350303500BAAD5D /* Debug */,
-				F344A8A22350303500BAAD5D /* Release */,
+				F34DAF18235EF5C000EDE5B3 /* Debug */,
+				F34DAF19235EF5C000EDE5B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F344A8842350303400BAAD5D /* Project object */;
+	rootObject = F34DAEFD235EF5C000EDE5B3 /* Project object */;
 }
